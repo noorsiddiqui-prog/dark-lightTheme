@@ -1,0 +1,66 @@
+@import ../../styles/helpers
+.background
+    width: 400px
+    // box-shadow: 3px 6px 26px -7px rgba(0,0,0,0.68)
+    // -webkit-box-shadow: 3px 6px 26px -7px rgba(0,0,0,0.68)
+    // -moz-box-shadow: 3px 6px 26px -7px rgba(0,0,0,0.68)
+    // background: rgba( 255, 255, 255, 0.25 )
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+    backdrop-filter: blur( 11px )
+    -webkit-backdrop-filter: blur( 11px )
+    border-radius: 10px
+    border: 1px solid rgba( 255, 255, 255, 0.18 )
+    padding: 0.8rem 1rem
+    border-radius: 20px
+    // background-color: $new-grey
+    +a
+        width: 450px
+    +s
+        max-width: 80%
+
+    .upper
+        // border: 2px solid red
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &>p
+            color: $neutrals3
+            font-weight: 500
+            font-size: 0.9rem
+    .lower
+        // border: 2px solid green
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &>div
+            display: flex
+            justify-content: center
+            align-items: center
+            &>p
+                // font-weight: 600
+                // font-size: 1.6rem
+                // // color: $blue
+                // +s
+                // font-size: 1.4rem
+        +s
+            flex-direction: column
+            align-items: flex-start
+        input
+            // border: 2px solid red
+            width: 100%
+            font-size: 1.2rem
+            border: none
+            outline: none
+            background-color: transparent
+            text-align: right
+            margin: 0rem 0.5rem
+            margin-top: 0.3rem
+            +s
+                font-size: 1.5rem
+
+            &::-webkit-inner-spin-button
+                -webkit-appearance: none
+            
+            &::-webkit-outer-spin-button
+                -webkit-appearance: none
+    

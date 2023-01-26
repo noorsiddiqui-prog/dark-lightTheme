@@ -1,0 +1,31 @@
+import { useState } from 'react';
+import './App.css';
+import EthereumApi from './components/EthereumApi';
+import PolygonApi from './components/PolygonApi';
+
+function App() {
+
+const[account, setAccount] = useState('')
+
+const connectWallet = async () => {
+  const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+  const account = accounts[0]
+  console.log("account on connectWallet => ", account? account : "no account ")
+  setAccount(account)
+}
+
+  return (
+    <div className="App">
+      <div>
+        <button onClick={connectWallet}>Connect</button>
+      </div>
+      <div>
+      <PolygonApi address = {account}/>
+        <EthereumApi account = {account}/>
+        <PolygonApi></PolygonApi>
+      </div>
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,11 @@
+
+.MuiSelect-outlined{
+    display: flex !important;
+    /* outline: none !important; */
+    /* border: none !important; */
+    /* background-color: white !important; */
+}
+fieldset{
+    border: none !important;
+    outline: none !important;
+}
